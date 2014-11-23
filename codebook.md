@@ -7,7 +7,7 @@ The following steps were followed to produce the tidy data set:
  
 * We downloaded the `.zip` file from [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) and we extracted the files into our working directory.
 * From the necessary files (`activity_labels.txt`, `features.txt`, `subject_test.txt`, `X_test.txt`, `Y_test.txt`, `subject_train.txt`, `X_train.txt`, `Y_train.txt`) we created in R the 6x2 data frame `activity_labels`, the 561x2 data frame `features`, the 2947x1 data frame `subject_test`, the 2947x561 data frame `X_test`, the 2947x1 data frame `Y_test`, the 7352x1 data frame `subject_train`, the 7352x561 data frame `X_train` and the 7352x1 data frame `Y_train`. 
-* We used rbind() to combine `X_train` and `X_test` into a 10299x561 data frame called `data`.
+* We used `rbind()` to combine `X_train` and `X_test` into a 10299x561 data frame called `data`.
 * We used the data frame `features` and the function `make.names()` to provide valid and unique names for the corresponding columns of the data frame `data`.
 * We extracted from `data` only the columns that correspond to the mean and standard deviation for each measurement, by using the `grepl()` function to keep only names with main() and std() in them (thus excluding meanFreq). This resulted in `data` becoming a 10299x66 data frame.
 * By combining `subject_train` and `subject_test`, we made a 561x1 data frame, which we appended to the end of our data, with the name "Subject", thus making `data` a 10299x67 data frame.
