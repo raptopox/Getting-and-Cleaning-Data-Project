@@ -20,5 +20,7 @@ The following steps were followed to produce the tidy data set:
 ## Variable description
 
 *Subject*: Integer between 1 and 30, indicating the number of the subject from which the respective measurements were taken.
+
 *Activity*: Factor variable with levels "LAYING", "SITTING", "STANDING", "WALKING", "WALKING_DOWNSTAIRS" and "WALKING_UPSTAIRS".
+
 *The rest of the variables*: Numeric variables that correspond to the average of the respective variables as described in the `feature_info.txt` file, with respect to Activity and Subject.
